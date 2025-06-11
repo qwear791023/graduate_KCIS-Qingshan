@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCIS - Qingshan</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body id="photos">
+    <audio autoplay loop id="audioelement" src=""></audio>
+    <div class="panel">
+        <div class="list_group">
+            <img src="../imgs/title_photo.png" alt="" class="list_title">
+            <a href="../index.html" class="hover return">
+                <img src="../imgs/btn_homeA.png" alt="" class="a">
+                <img src="../imgs/btn_homeB.png" alt="" class="b">
+            </a>
+            <button class="hover active" data-file="personal_uniform">
+                <img src="../imgs/btn-personal_uniformA.png" alt="" class="a">
+                <img src="../imgs/btn-personal_uniformB.png" alt="" class="b">
+            </button>
+            <button class="hover" data-file="personal_casual">
+                <img src="../imgs/btn-personal_casualA.png" alt="" class="a">
+                <img src="../imgs/btn-personal_casualB.png" alt="" class="b">
+            </button>
+            <button class="hover" data-file="team_uniform">
+                <img src="../imgs/btn-teamA.png" alt="" class="a">
+                <img src="../imgs/btn-teamB.png" alt="" class="b">
+            </button>
+        </div>
+        
+        <div class="list_content">
+            <div class="photo_carousel">
+                <div class="photo_view">
+                    <input type="radio" name="view_thumb" id="hide">
+                    <label for="hide"><img src="../imgs/icon/btn_viewA.png"></label>
+                    <input type="radio" name="view_thumb" id="show" checked>
+                    <label for="show"><img src="../imgs/icon/btn_viewB.png"></label>
+                </div>
+                <div class="photo_thumb">
+                    <button class="btn_prev"> <img src="../imgs/icon/page_prev.svg"> </button>
+                    <button class="btn_next"> <img src="../imgs/icon/page_next.svg"> </button>
+                    <div class="photo_thumb_size"></div>
+                    <ul class="photo_thumb_list js-output">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="photo_content">
+                    <button class="btn_prev"> <img src="../imgs/icon/page_prev.svg"> </button>
+                    <img src="" class="photo">
+                    <button class="btn_next"> <img src="../imgs/icon/page_next.svg"> </button>
+                </div>
+            </div>
+
+            <img src="../imgs/tint.png" alt="" class="tint">
+        </div>
+    </div>
+
+    <div class="title">
+        <img src="../imgs/title_slogan.png" alt="" class="slogan">
+        <img src="../imgs/title_KCIS.svg" alt="" class="school">
+    </div>
+
+
+    <script src="../all.js"></script>
+
+    <script>
+        window.onload = function () {
+            setInterval("toggleSound()", 1);
+        }
+        function toggleSound() {
+            var music = document.getElementById("audioelement");//獲取ID  
+            if (music.paused) { //判讀是否播放  
+                music.paused = false;
+                music.play(); //沒有就播放 
+            }
+        }
+    </script>
+</body>
+</html>
